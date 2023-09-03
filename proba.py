@@ -26,10 +26,12 @@ st.title ("")
 #Oznacza to, że znaki ucieczki, takie jak znak wsteczny (\) lub znak nowej linii (\n),
 #są traktowane dosłownie jako znaki, a nie jako instrukcje do interpretacji.
 
+#obraz
 image = Image.open('duhast.jpg')
-
 st.image(image, caption='Sunrise by the mountains')
-
+#mp3
+audio_file = open("duhast.mp3","rb").read()
+st.audio(audio_file, format="audio/mp3")
 
 
 #---------------------- przykładowy kod --------------------------------#
