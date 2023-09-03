@@ -26,10 +26,11 @@ st.title ("")
 #Oznacza to, że znaki ucieczki, takie jak znak wsteczny (\) lub znak nowej linii (\n),
 #są traktowane dosłownie jako znaki, a nie jako instrukcje do interpretacji.
 
-
-image = Image.open('kot.jpg')
+image = Image.open('duhast.jpg')
 
 st.image(image, caption='Sunrise by the mountains')
+
+
 
 #---------------------- przykładowy kod --------------------------------#
 DATE_COLUMN = 'date/time'
