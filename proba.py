@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
 
 st.title('Uber pickups in NYC')
 st.write("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,")
@@ -17,10 +18,23 @@ st.title ("")
 st.title ("")
 st.title ("")
 
+#---------------------- dodawanie plików mulitmedialnych--------------------------------#
+
+#Surowy łańcuch (ang. raw string) w Pythonie to specjalny rodzaj łańcucha znaków,
+#w którym znaki ucieczki nie są interpretowane jako sekwencje specjalne.
+#Oznacza to, że znaki ucieczki, takie jak znak wsteczny (\) lub znak nowej linii (\n),
+#są traktowane dosłownie jako znaki, a nie jako instrukcje do interpretacji.
+image = Image.open(r'C:\Users\wlkr2\OneDrive\Streamlit\duhast.jpg') #
+st.image(image, caption='okładka teledysku')
+
+st.audio(r'C:\Users\wlkr2\OneDrive\Streamlit\duhast.mp3', format="audio/mp3")
+
+st.video(r'C:\Users\wlkr2\OneDrive\Streamlit\duhast.mp4',format="video/mp4")
 
 
 
 
+#---------------------- przykładowy kod --------------------------------#
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
             'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
