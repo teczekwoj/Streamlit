@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 from PIL import Image
 
 st.title('Uber pickups in NYC')
@@ -24,15 +25,11 @@ st.title ("")
 #w którym znaki ucieczki nie są interpretowane jako sekwencje specjalne.
 #Oznacza to, że znaki ucieczki, takie jak znak wsteczny (\) lub znak nowej linii (\n),
 #są traktowane dosłownie jako znaki, a nie jako instrukcje do interpretacji.
-image = Image.open(r'C:\Users\wlkr2\OneDrive\Streamlit\duhast.jpg') #
-st.image(image, caption='okładka teledysku')
-
-st.audio(r'C:\Users\wlkr2\OneDrive\Streamlit\duhast.mp3', format="audio/mp3")
-
-st.video(r'C:\Users\wlkr2\OneDrive\Streamlit\duhast.mp4',format="video/mp4")
 
 
+image = Image.open('kot.jpg')
 
+st.image(image, caption='Sunrise by the mountains')
 
 #---------------------- przykładowy kod --------------------------------#
 DATE_COLUMN = 'date/time'
